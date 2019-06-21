@@ -29,7 +29,7 @@ public class HelloWorldConcept {
      *                  |___ChannelPipeline______|                               |______ChannelPipeline_____| 
      *                                                                               
      *  ①：StringEncoder继承于MessageToMessageEncoder，而MessageToMessageEncoder又继承于ChannelOutboundHandlerAdapter
-     *  ②：HelloWorldClientHandler.java
+     *  ②：HelloWorldClientHandler1.java
      *  ③：StringDecoder继承于MessageToMessageDecoder，而MessageToMessageDecoder又继承于ChannelInboundHandlerAdapter
      *  ④：StringEncoder 编码器
      *  ⑤：StringDecoder 解码器

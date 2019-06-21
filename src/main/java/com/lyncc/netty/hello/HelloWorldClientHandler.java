@@ -8,18 +8,18 @@ public class HelloWorldClientHandler extends ChannelInboundHandlerAdapter{
     
       @Override
       public void channelActive(ChannelHandlerContext ctx) {
-          System.out.println("HelloWorldClientHandler Active");
+          System.out.println("HelloWorldClientHandler1 Active");
           ctx.fireChannelActive();
       }
   
       @Override
       public void channelRead(ChannelHandlerContext ctx, Object msg) {
-         System.out.println("HelloWorldClientHandler read Message:"+msg);
+         System.out.println("HelloWorldClientHandler1 read Message:"+msg);
       }
       
       @Override
     public void channelInactive(ChannelHandlerContext ctx) throws Exception {
-          System.out.println("HelloWorldClientHandler inActive===========");
+          System.out.println("HelloWorldClientHandler1 inActive===========");
         super.channelInactive(ctx);
     }
   

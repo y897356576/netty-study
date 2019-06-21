@@ -7,7 +7,7 @@ import io.netty.util.AttributeKey;
 
 import java.util.HashSet;
 
-public class HelloWorld2ClientHandler extends ChannelInboundHandlerAdapter {
+public class HelloWorldClientHandler2 extends ChannelInboundHandlerAdapter {
 
     public static final AttributeKey<HashSet<Integer>> NETTY_CHANNEL_KEY1 = AttributeKey.valueOf("netty.channel1");
     
@@ -45,28 +45,33 @@ public class HelloWorld2ClientHandler extends ChannelInboundHandlerAdapter {
          System.out.println(student.getAge());
         
     }
-    
-     static class Student {
-       String id;
-       int age;
-    public String getId() {
-        return id;
-    }
-    public void setId(String id) {
-        this.id = id;
-    }
-    public int getAge() {
-        return age;
-    }
-    public void setAge(int age) {
-        this.age = age;
-    }
-    public Student(String id, int age) {
-        super();
-        this.id = id;
-        this.age = age;
-    }
-       
+
+    static class Student {
+        String id;
+        int age;
+
+        public String getId() {
+            return id;
+        }
+
+        public void setId(String id) {
+            this.id = id;
+        }
+
+        public int getAge() {
+            return age;
+        }
+
+        public void setAge(int age) {
+            this.age = age;
+        }
+
+        public Student(String id, int age) {
+            super();
+            this.id = id;
+            this.age = age;
+        }
+
     }
 
     @Override
@@ -80,7 +85,7 @@ public class HelloWorld2ClientHandler extends ChannelInboundHandlerAdapter {
                 System.out.println("value is ===="+i);
             }
         }
-        System.out.println("HelloWorldClientHandler read Message:" + msg);
+        System.out.println("HelloWorldClientHandler1 read Message:" + msg);
     }
 
     @Override

@@ -6,7 +6,7 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.Attribute;
 
 import java.util.Date;
-public class HelloWorldClientHandler extends ChannelInboundHandlerAdapter {
+public class HelloWorldClientHandler1 extends ChannelInboundHandlerAdapter {
 
 
     @Override
@@ -35,7 +35,7 @@ public class HelloWorldClientHandler extends ChannelInboundHandlerAdapter {
             System.out.println("channelRead attributeMap 中是有值的");
             System.out.println(nChannel.getName() + "=======" + nChannel.getCreateDate());
         }
-        System.out.println("HelloWorldClientHandler read Message:" + msg);
+        System.out.println("HelloWorldClientHandler1 read Message:" + msg);
         
         ctx.fireChannelRead(msg);
     }
